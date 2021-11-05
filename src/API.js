@@ -1,8 +1,8 @@
 import axios from "axios";
-import { SEARCH_BASE_URL, POPULAR_BASE_URL, API_URL} from "./config";
+import { SEARCH_BASE_URL, POPULAR_BASE_URL, API_URL } from "./config";
 
 const API = axios.create({
-  baseURL: API_URL
+  baseURL: API_URL,
 });
 
 const apiSetting = {
@@ -10,7 +10,7 @@ const apiSetting = {
     const endpoint = searchTerm
       ? `${SEARCH_BASE_URL}${searchTerm}&page=${page}`
       : `${POPULAR_BASE_URL}&page`;
-    return  API.get(endpoint)
+    return API.get(endpoint);
   },
 };
 
