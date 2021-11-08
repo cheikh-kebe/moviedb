@@ -20,9 +20,10 @@ export const GlobalStyle = createGlobalStyle`
 
   body{
     padding: 0;
+    background: #0b090a;
     
     h1{
-      color: #161a1d;
+      color: #f5f3f4;
       font-size: 2rem;
       font-weight: 600;
     }
