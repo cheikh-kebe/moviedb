@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body{
     padding: 0;
-    background: #0b090a;
+    background: #f5f3f4;
     
     h1{
       color: #f5f3f4;

@@ -15,7 +15,9 @@ export const Content = styled.div`
 `;
 
 export const LogoImg = styled.img`
+  box-shadow: 5px 5px 6px  #0b090a;
   width: 130px;
+  border-radius: 20px;
 
   @media screen and (max-width: 500px) {
     width: 80px;
