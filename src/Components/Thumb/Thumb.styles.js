@@ -16,5 +16,5 @@ export const Image = styled.img`
   transition: all 0.3s;
   border-radius: 20px;
   object-fit: cover;
-  box-shadow: 5px -5px 10px #0b090a;
+  box-shadow: 5px 6px 12px #0b090a;
 `;

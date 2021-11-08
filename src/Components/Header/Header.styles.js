@@ -15,7 +15,7 @@ export const Content = styled.div`
 `;
 
 export const LogoImg = styled.img`
-  box-shadow: 5px 5px 6px  #0b090a;
+  box-shadow: 5px 6px 12px  #0b090a;
   width: 130px;
   border-radius: 20px;
 
