@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.button`
-  background: #f5f3f4;
+  background: #e5383b;
   display: block;
   width: 15%;
   height: 50px;
@@ -10,5 +10,5 @@ export const Wrapper = styled.button`
   outline: none;
   cursor: pointer;
   font-size: var(--fontBig);
-  margin: 20px auto;
+  margin: 25px auto;
 `;

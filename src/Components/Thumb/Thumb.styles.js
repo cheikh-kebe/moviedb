@@ -13,8 +13,11 @@ export const Content = styled.div`
 export const Image = styled.img`
   width: 300px;
   max-width: 780px;
-  transition: all 0.3s;
   border-radius: 20px;
   object-fit: cover;
   box-shadow: 5px 6px 12px #0b090a;
+
+  :hover{
+    opacity:0.8
+  }
 `;
