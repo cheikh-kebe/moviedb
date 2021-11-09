@@ -6,7 +6,7 @@ const POPULAR_BASE_URL = `${API_URL}movie/popular?api_key=${API_KEY}&language=en
 //base iamge url
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/';
 //HEROBANNER SIZE
-const HEROBANNER_SIZE ='W1280'
+const HEROBANNER_SIZE ='w1280'
 //Poster Size
 const POSTER_SIZE = 'w780';
 
