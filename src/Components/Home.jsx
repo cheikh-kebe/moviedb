@@ -26,6 +26,8 @@ export const Home = () => {
                 ? IMAGE_BASE_URL + POSTER_SIZE + movies.poster_path
                 : null
             }
+            title={movies.title}
+            description={movies.overview}
           />
         ))}
       {loading && <h1>Chargement</h1>}
