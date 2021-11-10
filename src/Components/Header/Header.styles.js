@@ -10,8 +10,8 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 10px 0;
+  justify-content: space-between;
+  padding: 8px 110px;
   margin: 0 auto;
 `;
 
