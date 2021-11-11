@@ -30,14 +30,19 @@ export const Content = styled.div`
 `;
 
 export const Text = styled.div`
+border-radius: 20px;
   z-index: 100;
   max-width: 700px;
   position: absolute;
   bottom: 40px;
+  padding: 8px;
   margin-right: 20px;
   min-height: 100px;
   color: var(--white);
-
+  background-color: #ffffff25;
+  backdrop-filter: blur(12px);
+  --webkit-backdrop-filter: blur(12px);
+  
   h1 {
     font-size: var(--fontSuperBig);
     @media screen and (max-width: 720px) {
@@ -46,7 +51,7 @@ export const Text = styled.div`
   }
   p {
     font-size: var(--fontMedium);
-    color: var(--white);
+    color: #d3d3d3;
     @media screen and (max-width: 720px) {
       font-size: var(--fontSmall);
     }
