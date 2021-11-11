@@ -7,25 +7,32 @@ export const useMovieFetch = (movieId) => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    const fetchMovie = async () => {
+    const fetchMovie = async (page) => {
       try {
         setError(false);
         setLoading(true);
 
         const movie = await API.fetchMovie(movieId);
         const credits = await API.fetchCredits(movieId);
-        console.log(movie.data)
-        setState({
+        const similar = await API.fetchSimilarMovies(movieId);
+        console.log(movie.data);
+        console.log(credits.data);
+        console.log(similar.data);
+        setState((prev) => ({
           ...movie.data,
           cast: credits.data.cast,
-        });
+          results:
+            page > 1
+              ? [...prev.results, similar.data.results]
+              : [...similar.data.results],
+        }));
       } catch (error) {
         setError(true);
       }
       setLoading(false);
     };
-    fetchMovie()
+    fetchMovie();
   }, [movieId]);
 
-  return {state, error, loading};
+  return { state, error, loading };
 };

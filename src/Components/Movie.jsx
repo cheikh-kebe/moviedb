@@ -11,10 +11,11 @@ export const Movie = () => {
 
   const { state: movie, error, loading } = useMovieFetch(movieId);
   console.log(movie);
-  if (loading) return <div>Chargement</div>;
+  
   if (error) return <div>Une erreur est survenue</div>;
   return (
     <div>
+      {loading && <h1>Chargement</h1>}
       {movie.backdrop_path ? (
         <Herobanner
           image={`${IMAGE_BASE_URL}${HEROBANNER_SIZE}${movie.backdrop_path}`}
@@ -23,7 +24,12 @@ export const Movie = () => {
           homepage={movie.homepage}
         />
       ) : null}
-      
+      <Grid headTitle='Casting'>
+        
+      </Grid>
+      <Grid headTitle='Film similaires'>
+
+      </Grid>
     </div>
   );
 };

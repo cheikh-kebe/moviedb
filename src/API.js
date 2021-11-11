@@ -17,8 +17,12 @@ const apiSetting = {
     return API.get(endpoint);
   },
   fetchCredits: async (movieId) => {
-    const credits = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}&language=fr-FR`;
-    return API.get(credits);
+    const creditsEndpoint = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}&language=fr-FR`;
+    return API.get(creditsEndpoint);
+  },
+  fetchSimilarMovies: async (movieId) => {
+    const similarEndpoint = `${API_URL}movie/${movieId}/similar?api_key=${API_KEY}&language=fr-FR`;
+    return API.get(similarEndpoint)
   }
 };
 
