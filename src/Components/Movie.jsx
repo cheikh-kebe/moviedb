@@ -6,6 +6,7 @@ import { Actor } from "./Actor";
 import { Grid } from "./Grid";
 import { Herobanner } from "./HeroBanner";
 import NoImage from '../images/no_image.jpg'
+import { Thumb } from "./Thumb";
 
 export const Movie = () => {
   const { movieId } = useParams();
@@ -37,7 +38,21 @@ export const Movie = () => {
           />
         ))}
       </Grid>
-      <Grid headTitle="Film similaires"></Grid>
+      <Grid headTitle="Film similaires">
+      {movie.results.slice(0,8).map((movies) => (
+          <Thumb
+            key={movies.id}
+            clickable
+            movieId={movies.id}
+            image={
+              movies.poster_path
+                ? IMAGE_BASE_URL + POSTER_SIZE + movies.poster_path
+                : NoImage
+            }
+            title={movies.title}
+          />
+        ))}
+      </Grid>
     </div>
   );
 };

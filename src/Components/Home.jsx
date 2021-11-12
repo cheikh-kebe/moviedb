@@ -38,7 +38,6 @@ export const Home = () => {
                 : NoImage
             }
             title={movies.title}
-            description={movies.overview}
           />
         ))}
         {loading && <h1>Chargement</h1>}
