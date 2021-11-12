@@ -21,6 +21,10 @@ export const Wrapper = styled.div`
       opacity: 1;
     }
   }
+  @media screen and (max-width: 780px) {
+    height: 500px;
+    width: 100%;
+  }
 `;
 
 export const Content = styled.div`
@@ -30,19 +34,19 @@ export const Content = styled.div`
 `;
 
 export const Text = styled.div`
-border-radius: 20px;
+  border-radius: 20px;
   z-index: 100;
-  max-width: 700px;
+  max-width: 100%;
   position: absolute;
   bottom: 40px;
   padding: 8px;
   margin-right: 20px;
   min-height: 100px;
   color: var(--white);
-  background-color: #ffffff25;
+  background-color: #ffffff60;
   backdrop-filter: blur(12px);
   --webkit-backdrop-filter: blur(12px);
-  
+
   h1 {
     font-size: var(--fontSuperBig);
     @media screen and (max-width: 720px) {
@@ -51,7 +55,7 @@ border-radius: 20px;
   }
   p {
     font-size: var(--fontMedium);
-    color: #d3d3d3;
+    color: #161a1d;
     @media screen and (max-width: 720px) {
       font-size: var(--fontSmall);
     }
