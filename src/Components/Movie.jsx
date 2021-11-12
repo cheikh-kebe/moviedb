@@ -5,7 +5,7 @@ import { useMovieFetch } from "../Hooks/useMovieFetch";
 import { Actor } from "./Actor";
 import { Grid } from "./Grid";
 import { Herobanner } from "./HeroBanner";
-import { Thumb } from "./Thumb";
+import NoImage from '../images/no_image.jpg'
 
 export const Movie = () => {
   const { movieId } = useParams();
@@ -31,7 +31,7 @@ export const Movie = () => {
             imageURL={
               actor.profile_path
                 ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path}`
-                : null
+                : NoImage
             }
             character={actor.character}
           />
