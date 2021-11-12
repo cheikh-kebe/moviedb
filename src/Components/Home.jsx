@@ -6,6 +6,7 @@ import { Grid } from "./Grid";
 import { Herobanner } from "./HeroBanner";
 import { Searchbar } from "./Searchbar";
 import { Thumb } from "./Thumb";
+import NoImage from '../images/no_image.jpg'
 
 export const Home = () => {
   const { state, loading, error, setSearchTerm, setIsLoadingMore, searchTerm } =
@@ -21,7 +22,7 @@ export const Home = () => {
         <Herobanner
           image={`${IMAGE_BASE_URL}${HEROBANNER_SIZE}${state.results[0].backdrop_path}`}
           title={state.results[0].original_title}
-          text={state.results[0].overview}
+          // text={state.results[0].overview}
         />
       ) : null}
       <Searchbar setSearchTerm={setSearchTerm} />
@@ -34,7 +35,7 @@ export const Home = () => {
             image={
               movies.poster_path
                 ? IMAGE_BASE_URL + POSTER_SIZE + movies.poster_path
-                : null
+                : NoImage
             }
             title={movies.title}
             description={movies.overview}

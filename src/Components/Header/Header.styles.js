@@ -13,15 +13,30 @@ export const Content = styled.div`
   justify-content: space-between;
   padding: 8px 110px;
   margin: 0 auto;
+
+  @media screen and (max-width: 900px) {
+    padding: 8px 10px;
+    h1 {
+      margin: 10px;
+      font-size: var(--fontSmall);
+    }
+  }
+  @media screen and (max-width: 780px) {
+    padding: 8px 10px;
+    h1 {
+      margin: 10px;
+      font-size: var(--fontSmall);
+    }
+  }
 `;
 
 export const LogoImg = styled.img`
-  box-shadow: 5px 6px 11px  #0b090a;
+  box-shadow: 5px 6px 11px #0b090a;
   width: 80px;
   border-radius: 20px;
   background: #f5f3f4;
 
-  @media screen and (max-width: 500px) {
-    width: 80px;
+  @media screen and (max-width: 780px) {
+    width: 60px;
   }
 `;
