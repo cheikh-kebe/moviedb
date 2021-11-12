@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Wrapper, Content, Text } from "./HeroBanner.styles";
 
 export const Herobanner = ({ image, title, text }) => (

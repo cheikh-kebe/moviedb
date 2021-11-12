@@ -14,12 +14,12 @@ export const useHomeFetch = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [isLoadingMore, setIsLoadingMore ] = useState(false)
+  
   const fetchMovies = async (page, searchTerm = "") => {
     try {
       setError(false);
       setLoading(true);
       const movies = await API.fetchMovies(searchTerm, page);
-      console.log(movies.data.results);
       setState((prev) => ({
         ...movies.data,
         results:

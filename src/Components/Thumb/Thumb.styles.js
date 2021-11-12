@@ -11,7 +11,7 @@ export const Content = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 300px;
+  width: 290px;
   max-width: 780px;
   border-radius: 20px;
   object-fit: cover;
@@ -19,5 +19,14 @@ export const Image = styled.img`
 
   :hover{
     opacity:0.8
+  }
+  @media screen and (max-width:1000px){
+    width: 220px;
+  }
+  @media screen and (max-width:900px){
+    width: 270px;
+  }
+  @media screen and (max-width:400px){
+    width: 290px;
   }
 `;
