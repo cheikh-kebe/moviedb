@@ -23,6 +23,10 @@ const apiSetting = {
   fetchSimilarMovies: async (movieId) => {
     const similarEndpoint = `${API_URL}movie/${movieId}/similar?api_key=${API_KEY}&language=fr-FR`;
     return API.get(similarEndpoint)
+  },
+  fetchActor: async (personId) => {
+    const personEndpoint = `${API_URL}person/${personId}?api_key=${API_KEY}&language=fr-FR`;
+    return API.get(personEndpoint)
   }
 };
 

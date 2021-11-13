@@ -15,9 +15,9 @@ export const useMovieFetch = (movieId) => {
         const movie = await API.fetchMovie(movieId);
         const credits = await API.fetchCredits(movieId);
         const similar = await API.fetchSimilarMovies(movieId);
-        console.log(movie.data);
+        // console.log(movie.data);
         console.log(credits.data);
-        console.log(similar.data);
+        // console.log(similar.data);
         setState((prev) => ({
           ...movie.data,
           cast: credits.data.cast,

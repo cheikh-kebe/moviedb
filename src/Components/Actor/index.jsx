@@ -1,10 +1,23 @@
 import React from "react";
-import { Image, Wrapper } from "./Actor.styles";
+import { Link } from "react-router-dom";
+import { Image, Wrapper, Content } from "./Actor.styles";
 
-export const Actor = ({ imageURL, character, name }) => (
+export const Actor = ({ imageURL, character, name, clickable, personId }) => (
   <Wrapper>
-    <Image src={imageURL} />
-    <h3>{name}</h3>
-    <p>{character}</p>
+    {clickable ? (
+      <Content>
+        <Link to={`/actor/${personId}`}>
+          <Image src={imageURL} alt="actor thumb" />
+          <h3>{name}</h3>
+          <p>{character}</p>
+        </Link>
+      </Content>
+    ) : (
+      <>
+        <Image src={imageURL} alt="actor thumb" />
+        <h3>{name}</h3>
+        <p>{character}</p>
+      </>
+    )}
   </Wrapper>
 );

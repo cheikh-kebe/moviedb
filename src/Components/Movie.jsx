@@ -12,7 +12,6 @@ export const Movie = () => {
   const { movieId } = useParams();
 
   const { state: movie, error, loading } = useMovieFetch(movieId);
-  console.log(movie);
   if (loading) return <div>Chargement</div>;
   if (error) return <div>Une erreur est survenue</div>;
   return (
@@ -34,6 +33,8 @@ export const Movie = () => {
                 ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path}`
                 : NoImage
             }
+            clickable
+            personId={actor.id}
             character={actor.character}
           />
         ))}
