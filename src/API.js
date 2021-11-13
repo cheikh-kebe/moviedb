@@ -27,7 +27,7 @@ const apiSetting = {
   fetchActor: async (personId) => {
     const personEndpoint = `${API_URL}person/${personId}?api_key=${API_KEY}&language=fr-FR`;
     return API.get(personEndpoint)
-  }
+  },
 };
 
 export default apiSetting;

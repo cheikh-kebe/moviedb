@@ -8,9 +8,9 @@ export const Actor = ({ imageURL, character, name, clickable, personId }) => (
       <Content>
         <Link to={`/actor/${personId}`}>
           <Image src={imageURL} alt="actor thumb" />
+        </Link>
           <h3>{name}</h3>
           <p>{character}</p>
-        </Link>
       </Content>
     ) : (
       <>
