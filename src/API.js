@@ -28,6 +28,10 @@ const apiSetting = {
     const personEndpoint = `${API_URL}person/${personId}?api_key=${API_KEY}&language=fr-FR`;
     return API.get(personEndpoint)
   },
+  fetchMovieCredits: async (personId) => {
+    const actorMoviesEndpoint = `${API_URL}person/${personId}/movie_credits?api_key=${API_KEY}&language=fr-FR`;
+    return API.get(actorMoviesEndpoint)
+  },
 };
 
 export default apiSetting;

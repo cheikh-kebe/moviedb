@@ -5,7 +5,7 @@ import { useMovieFetch } from "../Hooks/useMovieFetch";
 import { Actor } from "./Actor";
 import { Grid } from "./Grid";
 import { Herobanner } from "./HeroBanner";
-import NoImage from '../images/no_image.jpg'
+import NoImage from "../images/no_image.jpg";
 import { Thumb } from "./Thumb";
 
 export const Movie = () => {
@@ -27,6 +27,7 @@ export const Movie = () => {
       <Grid headTitle="Casting">
         {movie.cast.map((actor) => (
           <Actor
+            key={actor.id}
             name={actor.name}
             imageURL={
               actor.profile_path
@@ -40,7 +41,7 @@ export const Movie = () => {
         ))}
       </Grid>
       <Grid headTitle="Film similaires">
-      {movie.results.slice(0,8).map((movies) => (
+        {movie.results.slice(0, 8).map((movies) => (
           <Thumb
             key={movies.id}
             clickable

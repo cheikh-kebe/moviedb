@@ -20,6 +20,7 @@ export const Content = styled.div`
   }
 `;
 export const Text = styled.div`
+  padding-top: 100px;
   margin: 100px;
   width: 800px;
 
@@ -35,7 +36,7 @@ export const Text = styled.div`
   }
   p {
     color: var(--black);
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   @media screen and (max-width: 900px) {
     width: 270px;

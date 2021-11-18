@@ -13,9 +13,12 @@ export const usePersonFetch = (personId) => {
         setLoading(true);
 
         const person = await API.fetchActor(personId);
-
+        const movieCredits = await API.fetchMovieCredits(personId);
+        console.log(movieCredits.data);
         setState(() => ({
           ...person.data,
+          ...movieCredits.data,
+            cast: movieCredits.data.cast.sort((a, b) => b.popularity - a.popularity),
         }));
       } catch (error) {
         setError(true);
