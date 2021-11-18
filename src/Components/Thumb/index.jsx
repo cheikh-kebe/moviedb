@@ -7,7 +7,7 @@ export const Thumb = ({ image, clickable, movieId, title }) => {
     <Wrapper>
       {clickable ? (
         <Content>
-          <Link to={`/${movieId}`}>
+          <Link to={`/movie/${movieId}`}>
             <Image src={image} alt="movie thumb" />
           </Link>
           <h3>{title}</h3>
