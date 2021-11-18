@@ -21,10 +21,7 @@ export const Wrapper = styled.div`
       opacity: 1;
     }
   }
-  @media screen and (max-width: 780px) {
-    height: 500px;
-    width: 100%;
-  }
+  
 `;
 
 export const Content = styled.div`
