@@ -11,7 +11,10 @@ export const Header = () => {
         <Link to="/">
           <LogoImg src={Logo} alt="netflix logo" />
         </Link>
-        <h1>Cheikh Kebe | Développeur web</h1>
+        <Link to="/tv">
+          <h1>Les séries TV</h1>
+        </Link>
+        <h2>Cheikh Kebe | Développeur web</h2>
       </Content>
     </Wrapper>
   );

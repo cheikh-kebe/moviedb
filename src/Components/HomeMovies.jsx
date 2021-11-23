@@ -8,7 +8,7 @@ import { Searchbar } from "./Searchbar";
 import { Thumb } from "./Thumb";
 import NoImage from '../images/no_image.jpg'
 
-export const Home = () => {
+export const HomeMovies = () => {
   const { state, loading, error, setSearchTerm, setIsLoadingMore, searchTerm } =
     useHomeFetch();
 
