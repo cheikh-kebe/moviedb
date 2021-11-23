@@ -10,7 +10,6 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: var(--maxWidth);
   margin: 0 20px auto;
 
   @media screen and (max-width: 900px) {
@@ -20,7 +19,7 @@ export const Content = styled.div`
   }
 `;
 export const Text = styled.div`
-  padding-top: 100px;
+  padding-top: 50px;
   margin: 100px;
   width: 800px;
 
@@ -37,6 +36,7 @@ export const Text = styled.div`
   p {
     color: var(--black);
     font-size: 1rem;
+    text-align: justify;
   }
   @media screen and (max-width: 900px) {
     width: 270px;
