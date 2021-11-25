@@ -1,6 +1,6 @@
 import React from "react";
 import { HEROBANNER_SIZE, IMAGE_BASE_URL, POSTER_SIZE } from "../config";
-import { useHomeFetch } from "../Hooks/useHomeFetch";
+import { useHomeMovieFetch } from "../Hooks/useHomeMovieFetch";
 import { Button } from "./Button";
 import { Grid } from "./Grid";
 import { Herobanner } from "./HeroBanner";
@@ -10,7 +10,7 @@ import NoImage from '../images/no_image.jpg'
 
 export const HomeMovies = () => {
   const { state, loading, error, setSearchTerm, setIsLoadingMore, searchTerm } =
-    useHomeFetch();
+    useHomeMovieFetch();
 
   if (error) return <div>Oulala, il y a un problème</div>;
   console.log(state);

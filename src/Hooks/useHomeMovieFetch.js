@@ -8,7 +8,7 @@ const initialState = {
   total_results: 0,
 };
 
-export const useHomeFetch = () => {
+export const useHomeMovieFetch = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [state, setState] = useState(initialState);
   const [loading, setLoading] = useState(false);

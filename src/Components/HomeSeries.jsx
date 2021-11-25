@@ -5,12 +5,12 @@ import { Grid } from "./Grid";
 import { Herobanner } from "./HeroBanner";
 import { Searchbar } from "./Searchbar";
 import NoImage from '../images/no_image.jpg'
-import { useSeriesFetch } from '../Hooks/useSeriesFetch';
+import { useHomeSeriesFetch } from '../Hooks/useHomeSeriesFetch';
 import { ThumbSeries } from './ThumbSeries';
 
-export const Series = () => {
+export const HomeSeries = () => {
   const { state, loading, error, setSearchTerm, setIsLoadingMore, searchTerm } =
-    useSeriesFetch();
+    useHomeSeriesFetch();
 
   if (error) return <div>Oulala, il y a un problème</div>;
   console.log(state);

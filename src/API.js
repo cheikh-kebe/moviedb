@@ -38,6 +38,10 @@ const apiSetting = {
       : `${POPULAR_SERIES_URL}&page=${page}`;
     return API.get(endpoint);
   },
+  fetchSerie: async (serieId) => {
+    const endpoint = `${API_URL}tv/${serieId}?api_key=${API_KEY}&language=fr-FR`;
+    return API.get(endpoint);
+  },
 };
 
 export default apiSetting;

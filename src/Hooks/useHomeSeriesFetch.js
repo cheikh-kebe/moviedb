@@ -8,7 +8,7 @@ const initialState = {
   total_results: 0  
 }
 
-export const useSeriesFetch = () => {
+export const useHomeSeriesFetch = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [state, setState] = useState(initialState);
   const [loading, setLoading] = useState(false);

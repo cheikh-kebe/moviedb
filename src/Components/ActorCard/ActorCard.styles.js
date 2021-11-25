@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
-  aspect-ratio: 6/3;
   display: flex;
   align-items: center;
   justify-content: center;
