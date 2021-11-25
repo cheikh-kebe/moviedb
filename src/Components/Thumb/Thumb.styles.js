@@ -4,14 +4,13 @@ export const Wrapper = styled.div``;
 
 export const Content = styled.div`
   color: #ba181b;
-
   p {
     color: #0b090a;
   }
 `;
 
 export const Image = styled.img`
-  width: 290px;
+  width: 220px;
   max-width: 780px;
   border-radius: 20px;
   object-fit: cover;

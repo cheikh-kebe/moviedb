@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.button`
-  background: #e5383b;
+  background: var(--lightBlack);
   display: block;
   width: 15%;
   height: 50px;
@@ -11,4 +11,5 @@ export const Wrapper = styled.button`
   cursor: pointer;
   font-size: var(--fontBig);
   margin: 25px auto;
+  color: var(--lightGrey)
 `;
