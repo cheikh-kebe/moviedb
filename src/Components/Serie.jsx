@@ -7,6 +7,7 @@ import { Herobanner } from "./HeroBanner";
 import NoImage from "../images/no_image.jpg";
 import { useSerieFetch } from "../Hooks/useSerieFetch";
 import { Info } from "./Info";
+import { Thumb } from "./Thumb";
 
 export const Serie = () => {
   const { serieId } = useParams();
@@ -17,10 +18,7 @@ export const Serie = () => {
   return (
     <div>
       <Info movie={serie} />
-      <Grid headTitle="Saisons disponibles">
-        
-      </Grid>
-      {/* <Grid headTitle="Film similaires">
+      {/* <Grid headTitle="Casting">
         {serie.results.slice(0, 8).map((movies) => (
           <Thumb
             key={movies.id}
@@ -35,6 +33,20 @@ export const Serie = () => {
           />
         ))}
       </Grid> */}
+      <Grid headTitle="Saisons disponibles">
+        {serie.seasons.map((season) => (
+          <Thumb
+            movieId={season.id}
+            image={
+              season.poster_path
+                ? `${IMAGE_BASE_URL}${POSTER_SIZE}${season.poster_path}`
+                : NoImage
+            }
+            title={season.name}
+            clickable={false}
+          />
+        ))}
+      </Grid>
     </div>
   );
 };

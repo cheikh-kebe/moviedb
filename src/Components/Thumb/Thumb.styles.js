@@ -7,10 +7,19 @@ export const Content = styled.div`
   p {
     color: #0b090a;
   }
+  @media screen and (max-width:1000px){
+    width: 220px;
+  }
+  @media screen and (max-width:800px){
+    width: 270px;
+  }
+  @media screen and (max-width:400px){
+    width: 150px;
+  }
 `;
 
 export const Image = styled.img`
-  width: 220px;
+  width: 100%;
   max-width: 780px;
   border-radius: 20px;
   object-fit: cover;
@@ -22,10 +31,10 @@ export const Image = styled.img`
   @media screen and (max-width:1000px){
     width: 220px;
   }
-  @media screen and (max-width:900px){
+  @media screen and (max-width:800px){
     width: 270px;
   }
   @media screen and (max-width:400px){
-    width: 290px;
+    width: 150px;
   }
 `;

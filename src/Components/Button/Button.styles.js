@@ -11,5 +11,10 @@ export const Wrapper = styled.button`
   cursor: pointer;
   font-size: var(--fontBig);
   margin: 25px auto;
-  color: var(--lightGrey)
+  color: var(--lightGrey);
+
+  @media screen and (max-width: 780px){
+    font-size: var(--fontSmall);
+    width: 100px
+  }
 `;

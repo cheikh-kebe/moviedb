@@ -21,6 +21,10 @@ export const Wrapper = styled.div`
       opacity: 1;
     }
   }
+
+  @media screen and (max-width: 720px) {
+      background-size: 700px;
+    }
   
 `;
 

@@ -1,19 +1,25 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  border-radius: 20px;
   margin: auto;
-`;
+  `;
 
 export const Content = styled.div`
+background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 20px auto;
+  margin: 20px 140px auto;
+  border-radius: 20px;
 
   @media screen and (max-width: 900px) {
     margin: 10px auto;
-    width: 270px;
+    width: 450px;
+    display: block;
+  }
+  @media screen and (max-width: 400px) {
+    margin: 10px auto;
+    width: 300px;
     display: block;
   }
 `;
@@ -38,7 +44,14 @@ export const Text = styled.div`
     text-align: justify;
   }
   @media screen and (max-width: 900px) {
-    width: 270px;
+    width: 400px;
+    margin: 20px auto;
+    p {
+      font-size: 100%;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    width: 280px;
     margin: 20px auto;
     p {
       font-size: 100%;
@@ -56,11 +69,11 @@ export const Image = styled.img`
   box-shadow: 5px 6px 12px #0b090a;
 
   @media screen and (max-width: 900px) {
-    width: 270px;
-    margin: 20px auto;
+    width: 260px;
+    margin: 20px;
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     width: 200px;
-    margin: 20px auto;
+    margin: 20px;
   }
 `;

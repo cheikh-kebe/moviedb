@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../../images/netflix.svg";
+import Tmdb from '../../images/tmdb_logo.svg'
 import { Link } from "react-router-dom";
 import { Wrapper, Content, LogoImg } from "./Header.styles";
 

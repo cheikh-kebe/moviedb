@@ -11,7 +11,7 @@ export const Content = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 290px;
+  width: 220px;
   max-width: 780px;
   border-radius: 20px;
   object-fit: cover;
