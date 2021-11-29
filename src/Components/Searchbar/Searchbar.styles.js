@@ -3,9 +3,20 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 80px;
   padding: 0 20px;
-`;
+  background: var(--lightBlack);
+  animation: animateHeroImage 2s;
+
+  @keyframes animateHeroImage {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  `;
 
 export const Content = styled.div`
   position: relative;
@@ -14,6 +25,8 @@ export const Content = styled.div`
   margin: 0 auto;
   border-radius: 30px;
   color: #f5f3f4;
+  height: 50px;
+  background: var(--medGrey);
 
   /* img {
     position: absolute;
@@ -32,7 +45,7 @@ export const Content = styled.div`
     border: 0;
     background: transparent;
     color: #0b090a;
-    height: 40px;
+    //height: 40px;
 
     :focus {
       outline: none;

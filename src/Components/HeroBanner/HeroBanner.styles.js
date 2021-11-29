@@ -21,6 +21,10 @@ export const Wrapper = styled.div`
       opacity: 1;
     }
   }
+
+  @media screen and (max-width: 720px) {
+      background-size: 700px;
+    }
   
 `;
 
@@ -40,7 +44,7 @@ export const Text = styled.div`
   margin-right: 20px;
   min-height: 100px;
   color: var(--white);
-  background-color: #ffffff60;
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(12px);
   --webkit-backdrop-filter: blur(12px);
 

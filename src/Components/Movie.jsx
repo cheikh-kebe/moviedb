@@ -1,12 +1,12 @@
 import React from "react";
 import { useParams } from "react-router";
-import { HEROBANNER_SIZE, IMAGE_BASE_URL, POSTER_SIZE } from "../config";
+import { IMAGE_BASE_URL, POSTER_SIZE } from "../config";
 import { useMovieFetch } from "../Hooks/useMovieFetch";
 import { Actor } from "./Actor";
 import { Grid } from "./Grid";
-import { Herobanner } from "./HeroBanner";
 import NoImage from "../images/no_image.jpg";
 import { Thumb } from "./Thumb";
+import { Info } from "./Info";
 
 export const Movie = () => {
   const { movieId } = useParams();
@@ -16,14 +16,7 @@ export const Movie = () => {
   if (error) return <div>Une erreur est survenue</div>;
   return (
     <div>
-      {movie.backdrop_path ? (
-        <Herobanner
-          image={`${IMAGE_BASE_URL}${HEROBANNER_SIZE}${movie.backdrop_path}`}
-          title={movie.original_title}
-          text={movie.overview}
-          homepage={movie.homepage}
-        />
-      ) : null}
+      <Info movie={movie} />
       <Grid headTitle="Casting">
         {movie.cast.map((actor) => (
           <Actor
