@@ -16,6 +16,7 @@ export const Header = () => {
           <h1>Séries TV</h1>
         </Link>
         <h2>Cheikh Kebe | Développeur web</h2>
+        <img src={Tmdb} alt="The Movie data base logo" />
       </Content>
     </Wrapper>
   );

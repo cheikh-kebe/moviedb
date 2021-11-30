@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body{
     padding: 0;
-    background: #f5f3f4;
+    background: var(--lightGrey);
     
     h1{
       color: #f5f3f4;

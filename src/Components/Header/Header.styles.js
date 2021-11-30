@@ -18,9 +18,9 @@ export const Content = styled.div`
   a{
     text-decoration: none;
   }
-  /* img{
+  img{
     width: 85px;
-  } */
+  }
 
   @media screen and (max-width: 900px) {
     padding: 8px 10px;
@@ -46,7 +46,7 @@ export const LogoImg = styled.img`
   box-shadow: 5px 6px 11px #0b090a;
   width: 80px;
   border-radius: 20px;
-  background: #f5f3f4;
+  background: var(--lightBlack);
 
   @media screen and (max-width: 780px) {
     width: 55px;
