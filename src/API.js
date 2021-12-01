@@ -15,11 +15,11 @@ const API = axios.create({
   baseURL: API_URL,
 });
 
-const defaultConfig = {
-  headers: {
-    "Content-Type": "application/json",
-  },
-};
+// const defaultConfig = {
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+// };
 
 const apiSetting = {
   //movies
@@ -63,8 +63,6 @@ const apiSetting = {
   //token and authenticate
   getRequestToken: async () => {
     const requestToken = await API.get(REQUEST_TOKEN_URL);
-    console.log(requestToken.data)
-
     return requestToken.data.request_token;
   },
   authenticate: async (username, password, requestToken) => {

@@ -1,13 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { GlobalStyle } from "../GlobalStyle";
+//Components
 import { Header } from "../Components/Header";
 import { HomeMovies } from "../Components/HomeMovies";
 import { Movie } from "../Components/Movie";
 import { Profile } from "../Components/Profile";
 import { HomeSeries } from "../Components/HomeSeries";
-import { GlobalStyle } from "../GlobalStyle";
 import { Serie } from "../Components/Serie";
-import { Login } from "../Components/login";
+import { Login } from "../Components/Login";
 //Context
 import UserProvider from "../context";
 

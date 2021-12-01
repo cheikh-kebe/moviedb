@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import API from "../API";
+import API from "../../API";
 //component
-import { Button } from "./Button";
+import { Button } from "../Button";
 //styles
 import { Wrapper } from "./login.styles";
 //Context
-import { Context } from "../context";
+import { Context } from "../../context";
 
 export const Login = () => {
   const [username, setUsername] = useState("");
@@ -25,7 +25,7 @@ export const Login = () => {
         password,
         requestToken,
       );
-      console.log(sessionId);
+      console.log(sessionId.data);
       setUser({ sessionId: sessionId.data.session_id, username });
       navigate("/");
 
@@ -49,15 +49,16 @@ export const Login = () => {
         value={username}
         name="username"
         onChange={handleInput}
-      />
+        />
       <label>Mot de passe</label>
       <input
         type="password"
         value={password}
         name="password"
         onChange={handleInput}
-      />
+        />
       <Button text="Se connecter" callback={handleSubmit} />
+        {error && <div className="error">Il y a une erreur!</div>}
     </Wrapper>
   );
 };
