@@ -1,11 +1,28 @@
 import axios from "axios";
-import { POPULAR_SERIES_URL, SEARCH_BASE_URL, SEARCH_SERIES_URL, POPULAR_BASE_URL, API_URL, API_KEY } from "./config";
+import {
+  POPULAR_SERIES_URL,
+  SEARCH_BASE_URL,
+  SEARCH_SERIES_URL,
+  POPULAR_BASE_URL,
+  API_URL,
+  API_KEY,
+  REQUEST_TOKEN_URL,
+  LOGIN_URL,
+  SESSION_ID_URL,
+} from "./config";
 
 const API = axios.create({
   baseURL: API_URL,
 });
 
+// const defaultConfig = {
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+// };
+
 const apiSetting = {
+  //movies
   fetchMovies: async (searchTerm, page) => {
     const endpoint = searchTerm
       ? `${SEARCH_BASE_URL}${searchTerm}&page=${page}`
@@ -32,6 +49,7 @@ const apiSetting = {
     const actorMoviesEndpoint = `${API_URL}person/${personId}/movie_credits?api_key=${API_KEY}&language=fr-FR`;
     return API.get(actorMoviesEndpoint);
   },
+  //tv series
   fetchSeries: async (searchTerm, page) => {
     const endpoint = searchTerm
       ? `${SEARCH_SERIES_URL}${searchTerm}&page=${page}`
@@ -41,6 +59,35 @@ const apiSetting = {
   fetchSerie: async (serieId) => {
     const endpoint = `${API_URL}tv/${serieId}?api_key=${API_KEY}&language=fr-FR`;
     return API.get(endpoint);
+  },
+  //token and authenticate
+  getRequestToken: async () => {
+    const requestToken = await API.get(REQUEST_TOKEN_URL);
+    return requestToken.data.request_token;
+  },
+  authenticate: async (username, password, requestToken) => {
+    const bodyData = {
+      username: username,
+      password: password,
+      request_token: requestToken,
+    };
+    const data = await API.post(
+      LOGIN_URL,
+      {
+       ...bodyData,
+      },
+      );
+    // Then get the sessionId with the requestToken
+    if (data.data.success) {
+      const sessionId = await API.post(
+        SESSION_ID_URL,
+        {
+          request_token: requestToken
+        },
+      );
+      //console.log(sessionId.data)
+      return sessionId;
+    }
   },
 };
 

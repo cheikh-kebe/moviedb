@@ -1,21 +1,45 @@
 import React from "react";
-import Logo from "../../images/netflix.svg";
-import Tmdb from '../../images/tmdb_logo.svg'
 import { Link } from "react-router-dom";
-import { Wrapper, Content, LogoImg } from "./Header.styles";
-
+import Logo from "../../images/film.svg";
+import TvLogo from "../../images/tv.svg";
+import Tmdb from "../../images/tmdb_logo.svg";
+import { Wrapper, Content, LogoImg, Nav } from "./Header.styles";
+//context
+import { Context } from "../../context";
+import { useContext } from "react/cjs/react.development";
 
 export const Header = () => {
+  const [user] = useContext(Context);
+  console.log(user);
+
   return (
     <Wrapper>
       <Content>
         <Link to="/">
-          <LogoImg src={Logo} alt="netflix logo" />
+          <Nav>
+            <LogoImg src={Logo} alt="movie logo" />
+            <span>Films</span>
+          </Nav>
         </Link>
         <Link to="/tv">
-          <h1>Séries TV</h1>
+          <Nav>
+            <LogoImg src={TvLogo} alt="Tv logo" />
+            <span>Séries</span>
+          </Nav>
         </Link>
-        <h2>Cheikh Kebe | Développeur web</h2>
+        <Nav>
+          <a href="https://www.themoviedb.org/documentation/api">
+            <LogoImg src={Tmdb} alt="The Movie data base logo" />
+            <span>Api</span>
+          </a>
+        </Nav>
+        {user ? (
+          <span className="loggedin">Bienvenue: {user.username}</span>
+        ) : (
+          <Link to="/login">
+            <span className="login">Se Connecter</span>
+          </Link>
+        )}
       </Content>
     </Wrapper>
   );

@@ -1,9 +1,7 @@
 import React from "react";
 import { useParams } from "react-router";
-import { HEROBANNER_SIZE, IMAGE_BASE_URL, POSTER_SIZE } from "../config";
-import { Actor } from "./Actor";
+import { IMAGE_BASE_URL, POSTER_SIZE } from "../config";
 import { Grid } from "./Grid";
-import { Herobanner } from "./HeroBanner";
 import NoImage from "../images/no_image.jpg";
 import { useSerieFetch } from "../Hooks/useSerieFetch";
 import { Info } from "./Info";
