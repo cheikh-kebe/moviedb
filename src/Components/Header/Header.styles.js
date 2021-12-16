@@ -23,6 +23,10 @@ export const Content = styled.div`
   span{
     font-size: var(--fontMedium);
     padding: 15px;
+
+    @media screen and (max-width: 780px) {
+      font-size: var(--fontSmall)
+    }
   }
 
   @media screen and (max-width: 900px) {
@@ -56,6 +60,6 @@ export const LogoImg = styled.img`
   //background: var(--lightGrey);
 
   @media screen and (max-width: 780px) {
-    width: 55px;
+    width: 30px;
   }
 `;
