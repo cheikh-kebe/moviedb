@@ -6,7 +6,7 @@ margin:0 auto;
 padding:0 20px;
 
 h1{
-  color: #e5383b;
+  color: ${({ theme }) => theme.gridTitle};
 
   @media screen and (max-width: 780px) {
     font-size: var(--fontBig)

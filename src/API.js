@@ -71,24 +71,34 @@ const apiSetting = {
       password: password,
       request_token: requestToken,
     };
-    const data = await API.post(
-      LOGIN_URL,
-      {
-       ...bodyData,
-      },
-      );
-    // Then get the sessionId with the requestToken
+    const data = await API.post(LOGIN_URL, {
+      ...bodyData,
+    });
+    
     if (data.data.success) {
-      const sessionId = await API.post(
-        SESSION_ID_URL,
-        {
-          request_token: requestToken
-        },
-      );
+      const sessionId = await API.post(SESSION_ID_URL, {
+        request_token: requestToken,
+      });
       //console.log(sessionId.data)
       return sessionId;
     }
   },
+  rateMovie: async (sessionId, movieId, value) => {
+    const endpoint = `${API_URL}movie/${movieId}/rating?api_key=${API_KEY}&session_id=${sessionId}`;
+
+    const rating = await API.post(endpoint, {
+      value: value,
+    });
+    return rating;
+  },
+  // rateSerie: async (sessionId, serieId, value) => {
+  //   const endpoint = `${API_URL}tv/${serieId}/rating?api_key=${API_KEY}&session_id=${sessionId}`;
+
+  //   const rating = await API.post(endpoint, {
+  //     body: value,
+  //   });
+  //   return rating;
+  // },
 };
 
 export default apiSetting;

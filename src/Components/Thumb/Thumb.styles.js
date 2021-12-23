@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div``;
 
 export const Content = styled.div`
-  color: #ba181b;
+  color: ${({theme}) => theme.thumbTitle};
   p {
     color: #0b090a;
   }

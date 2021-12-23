@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   align-items: center;
   height: 80px;
   padding: 0 20px;
-  background: var(--lightBlack);
+  //background: var(--lightBlack);
   animation: animateHeroImage 2s;
 
   @keyframes animateHeroImage {
@@ -26,7 +26,7 @@ export const Content = styled.div`
   border-radius: 30px;
   color: #f5f3f4;
   height: 50px;
-  background: var(--medGrey);
+  background: ${({theme}) => theme.searchBarbg};
 
   /* img {
     position: absolute;
