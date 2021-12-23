@@ -9,7 +9,7 @@ import { Wrapper, Content, LogoImg, Nav } from "./Header.styles";
 import { Context } from "../../context";
 import { GoBackButton } from "../GoBackButton";
 import ArrowLeft from '../../images/arrow.svg'
-export const Header = () => {
+export const Header = ({button}) => {
   const [user] = useContext(Context);
   const navigate = useNavigate()
   console.log(user);
@@ -39,12 +39,13 @@ export const Header = () => {
           </a>
         </Nav>
         {user ? (
-          <span className="loggedin">Bienvenue: {user.username}</span>
+          <h3 className="loggedin">Bienvenue: {user.username}</h3>
         ) : (
           <Link to="/login">
-            <span className="login">Se Connecter</span>
+            <h3 className="login">Se Connecter</h3>
           </Link>
         )}
+        {button}
       </Content>
     </Wrapper>
   );

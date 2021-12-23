@@ -12,7 +12,7 @@ export const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
-
+  // eslint-disable-next-line
   const [user, setUser] = useContext(Context);
   const navigate = useNavigate();
 

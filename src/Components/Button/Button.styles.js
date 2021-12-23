@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.button`
-  background: var(--lightBlack);
+  background: ${({theme}) => theme.nextButton};
   display: block;
   width: 15%;
   height: 50px;

@@ -34,11 +34,11 @@ export const Text = styled.div`
   h3 {
     color: var(--red);
     small {
-      color: var(--black);
+      color: ${({theme}) => theme.text};
     }
   }
   p {
-    color: var(--black);
+    color: ${({theme}) => theme.text};
     font-size: 1rem;
     text-align: justify;
   }

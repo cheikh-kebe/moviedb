@@ -2,10 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   padding: 0 20px;
-  /* background: #ba181b;
-  background: linear-gradient(174deg , #ba181b 12% #660708 65%); */
-  background: var(--black);
-  background: linear-gradient(174deg, var(--lightBlack) 4%, var(--red) 55%);
+  background: linear-gradient(17deg, ${({ theme }) => theme.header2} 4%, ${({ theme }) => theme.header1} 80%);
   height: 100px;
 `;
 
@@ -46,8 +43,12 @@ export const Content = styled.div`
       //margin: 10px;
       font-size: var(--fontSmall);
     }
+
   }
-`;
+  .loggedin{
+    color: var(--lightGrey)
+  }
+  `;
 
 export const Nav = styled.div`
   display: flex;

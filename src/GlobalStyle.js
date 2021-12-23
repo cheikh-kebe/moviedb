@@ -26,10 +26,11 @@ export const GlobalStyle = createGlobalStyle`
 
   body{
     padding: 0;
-    background: var(--lightGrey);
-    
+    margin: 0;
+    background: ${({ theme }) => theme.body};
+    transition: all 0.5s linear;
     h1{
-      color: #f5f3f4;
+      color: ${({ theme }) => theme.heroTitle};
       font-size: 2rem;
       font-weight: 600;
     }
