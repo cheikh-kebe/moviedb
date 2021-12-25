@@ -5,8 +5,8 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background: var(--lightBlack);
-  color: var(--lightGrey);
+  background: ${({theme}) => theme.themeSwitch};
+  color: ${({theme}) => theme.body};
   font-size: var(--fontSmall);
   width: 80px;
   height:35px;
