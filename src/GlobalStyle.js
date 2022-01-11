@@ -31,6 +31,7 @@ export const GlobalStyle = createGlobalStyle`
     transition: all 0.5s linear;
     h1{
       color: ${({ theme }) => theme.heroTitle};
+      transition: all 0.5s linear;
       font-size: 2rem;
       font-weight: 600;
     }

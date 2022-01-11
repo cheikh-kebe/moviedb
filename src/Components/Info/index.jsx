@@ -47,7 +47,7 @@ export const Info = ({ movie }) => {
           <p>{movie.overview}</p>
 
           <div className="rating-directors">
-            <div>
+            <div className="scores">
               <h3>SCORE</h3>
               <div className="score">{movie.vote_average}</div>
             </div>

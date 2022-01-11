@@ -24,6 +24,10 @@ export const Content = styled.div`
     @media screen and (max-width: 780px) {
       font-size: var(--fontSmall)
     }
+    @media screen and (max-width: 400px) {
+      font-size: 10px;
+      padding: 8px;
+    }
   }
 
   @media screen and (max-width: 900px) {
@@ -43,7 +47,11 @@ export const Content = styled.div`
       //margin: 10px;
       font-size: var(--fontSmall);
     }
-
+  }
+  @media screen and (max-width: 400px) {
+    h3 {
+      font-size: 10px;
+    }
   }
   .loggedin{
     color: var(--lightGrey)
@@ -62,5 +70,8 @@ export const LogoImg = styled.img`
 
   @media screen and (max-width: 780px) {
     width: 30px;
+  }
+  @media screen and (max-width: 400px) {
+    width: 20px;
   }
 `;

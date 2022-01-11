@@ -29,7 +29,7 @@ export const Content = styled.div`
   width: 100%;
   height: 100%;
 
-  @media screen and (max-width: 350px) {
+  @media screen and (max-width: 500px) {
     display: block;
   }
 `;
@@ -55,20 +55,34 @@ export const Text = styled.div`
     font-weight: 800;
     border-radius: 50%;
     margin: 0;
+    @media screen and (max-width: 770px) {
+      font-size: 20px;
+      margin: 0;
+    }
   }
   h1 {
     @media screen and (max-width: 770px) {
       font-size: var(--fontBig);
+      margin: 0;
     }
     @media screen and (max-width: 500px) {
-      font-size: var(--fontSmall);
+      font-size: 12px;
+    }
+  }
+  h3 {
+    @media screen and (max-width: 770px) {
+      font-size: 10px;
+      margin: 0;
     }
   }
   p {
     font-size: var(--fontMedium);
     @media screen and (max-width: 500px) {
       margin: 0;
-      font-size: 15px;
+      font-size: 12px;
     }
+  }
+  @media screen and (max-width: 500px) {
+    padding: 2px;
   }
 `;
