@@ -12,7 +12,10 @@ export const lightTheme = {
   themeSwitch: '#161a1d',
   actorBg: '#b1a7a6',
   actorName: '#ffffff',
+  primary: '#a4161a',
   background: "#363537",
+  burgerMenu:"#f5f3f4",
+  mobile: '576px'
 };
 
 export const darkTheme = {
@@ -29,5 +32,8 @@ export const darkTheme = {
   themeSwitch: '#f5f3f4',
   actorBg: '#161a1d',
   actorName: '#ba181b',
+  primary: '#161a1d',
+  burgerMenu:"#f5f3f4",
   background: '#999',
+  mobile: '576px'
 }

@@ -31,6 +31,7 @@ export const Content = styled.div`
   }
 
   @media screen and (max-width: 900px) {
+    
     padding: 8px 10px;
     h1 {
       margin: 10px;
@@ -72,6 +73,6 @@ export const LogoImg = styled.img`
     width: 30px;
   }
   @media screen and (max-width: 400px) {
-    width: 20px;
+    display: none;
   }
 `;
