@@ -31,6 +31,11 @@ export const Content = styled.div`
 
   @media screen and (max-width: 500px) {
     display: block;
+
+    img{ 
+      width: 90%;
+      margin: 12px;
+    }
   }
 `;
 

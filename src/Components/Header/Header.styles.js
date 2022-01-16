@@ -2,27 +2,31 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   padding: 0 20px;
-  background: linear-gradient(17deg, ${({ theme }) => theme.header2} 4%, ${({ theme }) => theme.header1} 80%);
+  background: linear-gradient(
+    17deg,
+    ${({ theme }) => theme.header2} 4%,
+    ${({ theme }) => theme.header1} 80%
+  );
   height: 100px;
 `;
 
 export const Content = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 15px 110px;
+  justify-content: space-evenly;
+  padding: 10px 110px;
   margin: 0 auto;
   a {
     text-decoration: none;
     color: var(--lightGrey);
   }
 
-  span{
+  span {
     font-size: var(--fontMedium);
     padding: 15px;
 
     @media screen and (max-width: 780px) {
-      font-size: var(--fontSmall)
+      font-size: var(--fontSmall);
     }
     @media screen and (max-width: 400px) {
       font-size: 10px;
@@ -31,17 +35,17 @@ export const Content = styled.div`
   }
 
   @media screen and (max-width: 900px) {
-    
-    padding: 8px 10px;
+    padding-top: 10px;
     h1 {
       margin: 10px;
-      font-size: var(--fontSmall);
+      padding-top: 10px;
+      font-size: var(--fontMedium);
     }
   }
   @media screen and (max-width: 780px) {
-    padding: 8px 10px;
+    padding: 30px;
     h1 {
-      margin: 10px;
+      margin: 1px;
       font-size: var(--fontSmall);
     }
     h2 {
@@ -54,14 +58,11 @@ export const Content = styled.div`
       font-size: 10px;
     }
   }
-  .loggedin{
-    color: var(--lightGrey)
+  .loggedin {
+    color: var(--lightGrey);
   }
-  `;
+`;
 
-export const Nav = styled.div`
-  display: flex;
-`
 
 export const LogoImg = styled.img`
   //box-shadow: 5px 6px 11px #0b090a;
@@ -73,6 +74,6 @@ export const LogoImg = styled.img`
     width: 30px;
   }
   @media screen and (max-width: 400px) {
-    display: none;
+    width: 28px;
   }
 `;

@@ -23,9 +23,13 @@ export const Wrapper = styled.div`
   }
 
   @media screen and (max-width: 720px) {
-      background-size: 700px;
-    }
-  
+    //background-position: center;
+    background-size: 100%;
+    height: 300px;
+  }
+  @media screen and (max-width: 480px) {
+    background-size: 700px;
+  }
 `;
 
 export const Content = styled.div`
