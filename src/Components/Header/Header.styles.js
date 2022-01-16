@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  padding: 0 20px;
+  //padding: 0 20px;
   background: linear-gradient(
     17deg,
     ${({ theme }) => theme.header2} 4%,
@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 10px 110px;
   margin: 0 auto;
   a {
@@ -43,7 +43,7 @@ export const Content = styled.div`
     }
   }
   @media screen and (max-width: 780px) {
-    padding: 30px;
+    padding: 10px;
     h1 {
       margin: 1px;
       font-size: var(--fontSmall);
