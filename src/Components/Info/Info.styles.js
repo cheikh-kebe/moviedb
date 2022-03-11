@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     backdrop ? `url(${IMAGE_BASE_URL}${HEROBANNER_SIZE}${backdrop})` : "#000"};
   background-size: cover;
   background-position: center;
-  height: 800px;
+  height: 55rem;
   padding: 40px 20px;
   animation: animateMovieInfo 1s;
 
@@ -94,11 +94,11 @@ export const Text = styled.div`
     }
   }
   p {
-    font-size: var(--fontMedium);
-    font-weight: 400;
+    font-weight: 600;
+    color: white;
     @media screen and (max-width: 500px) {
       margin: 0;
-      font-size: 12px;
+      font-size: 11px;
     }
   }
   @media screen and (max-width: 500px) {

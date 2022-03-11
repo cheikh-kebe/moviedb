@@ -18,6 +18,7 @@ import UserProvider from "../context";
 import { ThemeButton } from "../Components/ThemeButton";
 //hooks
 import { useOnClickOutside } from "../Hooks/useOutsideMenu";
+import { ScrollButton } from "../Components/TopButton";
 
 export const App = () => {
   const [theme, setTheme] = useState("light");
@@ -64,6 +65,7 @@ export const App = () => {
           <GlobalStyle />
         </UserProvider>
       </Router>
+      <ScrollButton />
     </ThemeProvider>
   );
 };

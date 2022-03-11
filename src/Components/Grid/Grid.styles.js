@@ -22,7 +22,7 @@ export const Content = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     grid-gap: 4rem;
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 360px) {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-gap: 2rem;
   }
