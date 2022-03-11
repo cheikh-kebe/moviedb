@@ -51,7 +51,6 @@ export const Info = ({ movie }) => {
               <h3>SCORE</h3>
               <div className="score">{movie.vote_average}</div>
             </div>
-          </div>
           {user && (
             <div>
               <h2>Votre note</h2>
@@ -64,6 +63,7 @@ export const Info = ({ movie }) => {
           {error && (
             <div><p>Il y a un problème</p></div>
           )}
+          </div>
 
         </Text>
       </Content>

@@ -27,13 +27,14 @@ export const Content = styled.div`
   background: rgba(0, 0, 0, 0.6);
   border-radius: 20px;
   width: 100%;
-  height: 100%;
+  
 
   @media screen and (max-width: 500px) {
     display: block;
 
     img{ 
       width: 90%;
+      height: 350px;
       margin: 12px;
     }
   }
@@ -60,24 +61,36 @@ export const Text = styled.div`
     font-weight: 800;
     border-radius: 50%;
     margin: 0;
-    @media screen and (max-width: 770px) {
+    @media screen and (max-width: 780px) {
       font-size: 20px;
       margin: 0;
     }
   }
   h1 {
-    @media screen and (max-width: 770px) {
+    @media screen and (max-width: 780px) {
       font-size: var(--fontBig);
       margin: 0;
     }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 480px) {
+      font-size: 12px;
+    }
+  }
+  h2 {
+    @media screen and (max-width: 780px) {
+      font-size: var(--fontBig);
+      margin: 0;
+    }
+    @media screen and (max-width: 480px) {
       font-size: 12px;
     }
   }
   h3 {
-    @media screen and (max-width: 770px) {
+    @media screen and (max-width: 780px) {
       font-size: 10px;
       margin: 0;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 12px;
     }
   }
   p {

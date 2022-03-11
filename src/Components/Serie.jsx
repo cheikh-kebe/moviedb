@@ -35,6 +35,7 @@ export const Serie = () => {
         {serie.seasons.map((season) => (
           <Thumb
             movieId={season.id}
+            key={season.id}
             image={
               season.poster_path
                 ? `${IMAGE_BASE_URL}${POSTER_SIZE}${season.poster_path}`
