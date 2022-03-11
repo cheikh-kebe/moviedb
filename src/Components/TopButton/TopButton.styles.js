@@ -12,6 +12,6 @@ export const Button = styled.div`
   color: var(--lightBlack);
 
   @media screen and (max-width: 360px){
-    left: 60%;
+    left: 62%;
   }
 `;
