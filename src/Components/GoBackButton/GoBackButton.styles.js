@@ -9,11 +9,8 @@ export const Wrapper = styled.div`
 `;
 export const LogoImg = styled.img`
   //box-shadow: 5px 6px 11px #0b090a;
-  width: 40px;
+  width: 20px;
   //border-radius: 5px;
   //background: var(--lightGrey);
 
-  @media screen and (max-width: 780px) {
-    width: 55px;
-  }
 `;

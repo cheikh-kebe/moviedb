@@ -6,7 +6,7 @@ import { Context } from "../../context";
 import { GoBackButton } from "../GoBackButton";
 import ArrowLeft from "../../images/arrow.svg";
 
-export const Header = ({ button }) => {
+export const Header = () => {
   const [user] = useContext(Context);
   const navigate = useNavigate();
   console.log(user);
