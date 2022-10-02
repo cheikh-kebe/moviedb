@@ -53,7 +53,7 @@ export const Info = ({ movie }) => {
             </div>
           {user && (
             <div>
-              <h2>Votre note</h2>
+              <h4>Votre note</h4>
               <Rating callback={handleRating} />
             </div>
           )}

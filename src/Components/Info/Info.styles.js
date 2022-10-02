@@ -27,10 +27,19 @@ export const Content = styled.div`
   background: rgba(0, 0, 0, 0.6);
   border-radius: 20px;
   width: 100%;
+  padding:12px;
   
-
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 780px){
+    display:flex;
+    flex-direction: column;
+    
+    img{ 
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 480px) {
     display: block;
+    height: fit-content;
 
     img{ 
       width: 90%;
@@ -54,18 +63,21 @@ export const Text = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     background: #fff;
     color: #000;
-    font-weight: 800;
+    font-weight: 600;
+    font-size: 14px;
     border-radius: 50%;
     margin: 0;
+
     @media screen and (max-width: 780px) {
-      font-size: 20px;
+      font-size: 12px;
       margin: 0;
     }
   }
+
   h1 {
     @media screen and (max-width: 780px) {
       font-size: var(--fontBig);
@@ -75,6 +87,7 @@ export const Text = styled.div`
       font-size: 12px;
     }
   }
+
   h2 {
     @media screen and (max-width: 780px) {
       font-size: var(--fontBig);
@@ -84,24 +97,30 @@ export const Text = styled.div`
       font-size: 12px;
     }
   }
+
+  h4{
+    margin-left: 20px;
+  }
+
   h3 {
     @media screen and (max-width: 780px) {
       font-size: 10px;
-      margin: 0;
+      
     }
     @media screen and (max-width: 480px) {
       font-size: 12px;
     }
   }
+
   p {
-    font-weight: 600;
+    font-weight: 400;
     color: white;
-    @media screen and (max-width: 500px) {
-      margin: 0;
-      font-size: 11px;
+    @media screen and (max-width: 780px) {
+      font-size: 14px;
     }
   }
-  @media screen and (max-width: 500px) {
+
+  @media screen and (max-width: 480px) {
     padding: 2px;
   }
 `;

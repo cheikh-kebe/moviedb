@@ -15,7 +15,10 @@ export const lightTheme = {
   primary: '#a4161a',
   background: "#363537",
   burgerMenu:"#f5f3f4",
-  mobile: '576px'
+  small: '576px',
+  medium: '768px',
+  large: '992px',
+  xl:'1200px'
 };
 
 export const darkTheme = {
@@ -35,5 +38,8 @@ export const darkTheme = {
   primary: '#161a1d',
   burgerMenu:"#f5f3f4",
   background: '#999',
-  mobile: '576px'
+  small: '576px',
+  medium: '768px',
+  large: '992px',
+  xl:'1200px'
 }

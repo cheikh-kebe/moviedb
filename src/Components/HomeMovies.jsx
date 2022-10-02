@@ -16,7 +16,7 @@ export const HomeMovies = () => {
   console.log(state);
   
   return (
-    <>
+    <body>
       {state.results[0] ? (
         
         <Herobanner
@@ -45,6 +45,6 @@ export const HomeMovies = () => {
       {state.page < state.total_pages && !loading && (
         <Button text="Suivant" callback={() => setIsLoadingMore(true)} />
       )}
-    </>
+    </body>
   );
 };

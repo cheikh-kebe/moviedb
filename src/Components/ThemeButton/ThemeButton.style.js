@@ -14,11 +14,13 @@ export const Wrapper = styled.div`
   border: 0;
   border-radius: 10px;
   outline: none;
-  @media screen and (max-width: 400px) {
+
+  
+  @media screen and (max-width: 480px) {
     margin: 5px;
     height: 28px;
     //width: 40px;
     padding: 10px;
-    font-size: 12px;
+    font-size: 14px;
   }
 `;

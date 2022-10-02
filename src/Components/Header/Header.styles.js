@@ -7,21 +7,20 @@ export const Wrapper = styled.div`
     ${({ theme }) => theme.header2} 4%,
     ${({ theme }) => theme.header1} 80%
   );
-  height: 100px;
 `;
 
 export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 110px;
+  padding: 20px;
   margin: 0 auto;
   a {
     text-decoration: none;
     color: var(--lightGrey);
   }
 
-  span {
+  /* span {
     font-size: var(--fontMedium);
     padding: 15px;
 
@@ -32,28 +31,30 @@ export const Content = styled.div`
       font-size: 10px;
       padding: 8px;
     }
-  }
+  } */
 
-  @media screen and (max-width: 900px) {
-    padding-top: 10px;
+  @media screen and (max-width: 1024px) {
     h1 {
       margin: 10px;
       padding-top: 10px;
-      font-size: var(--fontMedium);
+      font-size: var(--fontBig);
     }
   }
-  @media screen and (max-width: 780px) {
-    padding: 10px;
+  @media screen and (max-width: 768px) {
+    padding: 20px;
     h1 {
-      margin: 1px;
-      font-size: var(--fontSmall);
+      font-size: var(--fontMedium);
     }
     h2 {
       //margin: 10px;
       font-size: var(--fontSmall);
     }
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+    h1{
+      font-size: var(--fontMedium)
+    }
     h3 {
       font-size: 10px;
     }
@@ -66,14 +67,16 @@ export const Content = styled.div`
 
 export const LogoImg = styled.img`
   //box-shadow: 5px 6px 11px #0b090a;
-  width: 70px;
+  width: 50px;
+  margin-left: 15px;
   //border-radius: 5px;
   //background: var(--lightGrey);
 
   @media screen and (max-width: 780px) {
-    width: 30px;
+    width: 40px;
   }
-  @media screen and (max-width: 400px) {
-    width: 28px;
+  @media screen and (max-width: 480px) {
+    margin:20px;
+    
   }
 `;

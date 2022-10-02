@@ -14,7 +14,7 @@ export const Wrapper = styled.button`
   color: var(--lightGrey);
 
   @media screen and (max-width: 780px){
-    font-size: var(--fontSmall);
+    font-size: var(--fontMedium);
     width: 100px
   }
 `;

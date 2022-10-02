@@ -18,11 +18,12 @@ export const Content = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 2rem;
+
   @media screen and (max-width: 780px) {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    grid-gap: 4rem;
+    grid-gap: 2rem;
   }
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 460px) {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-gap: 2rem;
   }

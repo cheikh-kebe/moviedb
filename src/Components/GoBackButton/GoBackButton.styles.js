@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.button`
+  background: transparent;
+  border:none;
+  margin-left: 60px;
   cursor: pointer;
-
-  @media screen and (max-width: 780px){
-    width: 80px
-  }
 `;
 export const LogoImg = styled.img`
   //box-shadow: 5px 6px 11px #0b090a;
