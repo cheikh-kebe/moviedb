@@ -23,7 +23,6 @@ export const Wrapper = styled.div`
   }
 
   @media screen and (max-width: 720px) {
-    //background-position: center;
     background-size: 100%;
     height: 300px;
   }

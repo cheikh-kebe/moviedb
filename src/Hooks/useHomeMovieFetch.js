@@ -25,7 +25,7 @@ export const useHomeMovieFetch = () => {
         results:
           page > 1 ? [...prev.results, ...movies.data.results] : [...movies.data.results],
       }));
-    } catch (error) {
+    } catch (err) {
       setError(true);
     }
     setLoading(false);
@@ -42,4 +42,3 @@ export const useHomeMovieFetch = () => {
 
   return { state, loading, searchTerm, setSearchTerm, error, setIsLoadingMore };
 };
- 

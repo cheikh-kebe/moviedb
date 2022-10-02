@@ -15,12 +15,6 @@ const API = axios.create({
   baseURL: API_URL,
 });
 
-// const defaultConfig = {
-//   headers: {
-//     "Content-Type": "application/json",
-//   },
-// };
-
 const apiSetting = {
   //movies
   fetchMovies: async (searchTerm, page) => {

@@ -13,9 +13,6 @@ export const useSerieFetch = (serieId) => {
         setLoading(true);
 
         const serie = await API.fetchSerie(serieId);
-        //const credits = await API.fetchCredits(serieId);
-        //const similar = await API.fetchSimilarMovies(serieId);
-        console.log(serie.data);
         setState(() => ({
           ...serie.data,
           // cast: credits.data.cast,

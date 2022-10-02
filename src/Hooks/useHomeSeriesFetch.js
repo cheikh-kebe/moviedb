@@ -25,7 +25,7 @@ export const useHomeSeriesFetch = () => {
         results:
           page > 1 ? [...prev.results, ...series.data.results] : [...series.data.results],
       }));
-    } catch (error) {
+    } catch (err) {
       setError(true)
     }
     setLoading(false)

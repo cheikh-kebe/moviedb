@@ -7,9 +7,6 @@ export const Wrapper = styled.button`
   cursor: pointer;
 `;
 export const LogoImg = styled.img`
-  //box-shadow: 5px 6px 11px #0b090a;
   width: 20px;
-  //border-radius: 5px;
-  //background: var(--lightGrey);
 
 `;
