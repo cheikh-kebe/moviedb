@@ -12,7 +12,7 @@ export const Menu = ({ open, button }) => {
   const [user] = useContext(Context);
 
   return (
-    <StyledMenu open={open}>
+    <StyledMenu aria-label="menu" open={open}>
       <div>{button}</div>
       
       <Link to="/">

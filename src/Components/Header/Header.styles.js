@@ -19,6 +19,11 @@ export const Content = styled.div`
     text-decoration: none;
     color: var(--lightGrey);
   }
+  h1{
+    &:hover{
+      color: ${({theme}) => theme.text};
+    }
+  }
 
   @media screen and (max-width: 1024px) {
     h1 {

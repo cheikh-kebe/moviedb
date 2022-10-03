@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
   border: 0;
   border-radius: 10px;
   outline: none;
+  font-size:14px;
 
   
   @media screen and (max-width: 480px) {

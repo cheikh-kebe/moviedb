@@ -12,11 +12,9 @@ export const HomeMovies = () => {
   const { state, loading, error, setSearchTerm, setIsLoadingMore, searchTerm } =
     useHomeMovieFetch();
 
-  if (error) return <div>Oulala, il y a un problème</div>;
-  console.log(state);
-  
+  if (error) return <div>Oulala, il y a un problème</div>;  
   return (
-    <body>
+    <section aria-label="home movies">
       {state.results[0] ? (
         
         <Herobanner
@@ -45,6 +43,6 @@ export const HomeMovies = () => {
       {state.page < state.total_pages && !loading && (
         <Button text="Suivant" callback={() => setIsLoadingMore(true)} />
       )}
-    </body>
+    </section>
   );
 };

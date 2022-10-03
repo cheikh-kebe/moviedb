@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Wrapper, Content } from "./Header.styles";
 //context
 import { Context } from "../../context";
@@ -11,11 +11,13 @@ export const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <header>
+    <header aria-label="header">
       <Wrapper>
         <Content>
           <GoBackButton callback={() => navigate(-1)} svg={ArrowLeft} />
-          <h1>React MovieDB</h1>
+          <Link to={'/'}>
+            <h1>React MovieDB</h1>
+          </Link>
           {user &&
             <h3 className="loggedin">Bienvenue: {user.username}</h3>
           }

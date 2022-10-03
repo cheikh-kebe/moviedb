@@ -4,9 +4,9 @@ import { Content, Image, Wrapper } from "./Thumb.styles";
 
 export const Thumb = ({ image, clickable, movieId, title }) => {
   return (
-    <Wrapper>
+    <Wrapper aria-label="thumb">
       {clickable ? (
-        <Content>
+        <Content aria-label="movie thumb">
           <Link to={`/movie/${movieId}`}>
             <Image src={image} alt="movie thumb" />
           </Link>
